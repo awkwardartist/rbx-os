@@ -523,6 +523,30 @@ secure-c/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/secure-c.dir/build.make CMakeFiles/secure-c.dir/build
 .PHONY : secure-c/fast
 
+src/args.o: src/args.c.o
+.PHONY : src/args.o
+
+# target to build an object file
+src/args.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/secure-c.dir/build.make CMakeFiles/secure-c.dir/src/args.c.o
+.PHONY : src/args.c.o
+
+src/args.i: src/args.c.i
+.PHONY : src/args.i
+
+# target to preprocess a source file
+src/args.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/secure-c.dir/build.make CMakeFiles/secure-c.dir/src/args.c.i
+.PHONY : src/args.c.i
+
+src/args.s: src/args.c.s
+.PHONY : src/args.s
+
+# target to generate assembly for a file
+src/args.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/secure-c.dir/build.make CMakeFiles/secure-c.dir/src/args.c.s
+.PHONY : src/args.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -587,6 +611,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... secure-c"
+	@echo "... src/args.o"
+	@echo "... src/args.i"
+	@echo "... src/args.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

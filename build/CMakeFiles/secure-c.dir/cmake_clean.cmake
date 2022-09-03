@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/secure-c.dir/src/args.c.o"
+  "CMakeFiles/secure-c.dir/src/args.c.o.d"
   "CMakeFiles/secure-c.dir/src/main.c.o"
   "CMakeFiles/secure-c.dir/src/main.c.o.d"
   "secure-c"

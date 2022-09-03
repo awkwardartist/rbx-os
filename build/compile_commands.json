@@ -3,5 +3,10 @@
   "directory": "/home/awkward/Sources/Secure-C/build",
   "command": "/sbin/gcc   -g -o CMakeFiles/secure-c.dir/src/main.c.o -c /home/awkward/Sources/Secure-C/src/main.c",
   "file": "/home/awkward/Sources/Secure-C/src/main.c"
+},
+{
+  "directory": "/home/awkward/Sources/Secure-C/build",
+  "command": "/sbin/gcc   -g -o CMakeFiles/secure-c.dir/src/args.c.o -c /home/awkward/Sources/Secure-C/src/args.c",
+  "file": "/home/awkward/Sources/Secure-C/src/args.c"
 }
 ]
