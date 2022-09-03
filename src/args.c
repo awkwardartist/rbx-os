@@ -35,17 +35,36 @@ char *get_longform(char *sf) {
 
 // call to set global program properties
 // using raw command line arguments
-void parse(int argc, char **argv) {
+void parse(int argc, char **argv, ARG_ENTRY *out) {
     char *a;
+
     // loop for each argument
     for(int i = 0; i < argc; i++) {
-        a = strdup(argv[i]); // duplicate argument
+        a = argv[i]; // duplicate argument
         if(*a == '-') {
             // get longform arg 
             // if not longform
             if(*(a+1) != '-') 
-                a = get_longform(a);
+                a = get_longform(a); 
+            
+            a += 2; // trim off '--'
+            
+            out->Name = a; // set name
+            out->Value = 0; // null on default
 
+            out = &out[1]; // increment to next arg
+        } else {
+            // see if file exists
+            FILE *src = fopen(a, "r+"); // try open file
+            if(src) {
+                // todo: handle input file
+            } else if(!(out-sizeof(ARG_ENTRY))->Value) {
+                // get previous argument
+                ARG_ENTRY *prv = out - sizeof(ARG_ENTRY);
+
+                prv->Value = a; // set value
+                prv->Default = NULL; // set to 0
+            }
             
         }
     }

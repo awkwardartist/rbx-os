@@ -13,4 +13,4 @@ typedef struct {
          *Name;         // longform name of the entry 
 } ARG_ENTRY;
 
-extern void parse(int,char**);
+extern void parse(int,char**,ARG_ENTRY*);
