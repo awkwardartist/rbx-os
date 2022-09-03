@@ -31,7 +31,11 @@ char *get_longform(char *sf) {
         if(shortform[i][1] == sf[1]) 
             return strdup(longform[i]); // return duplicated string
     }
+
+    printf("FATAL: Argument \'%s\' Invalid.\n",sf);
+    exit(0);
 }
+
 
 // call to set global program properties
 // using raw command line arguments
