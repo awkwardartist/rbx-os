@@ -1,1 +1,1 @@
-/sbin/gcc -g -rdynamic "CMakeFiles/secure-c.dir/src/main.c.o" -o secure-c 
+/sbin/gcc -g -rdynamic "CMakeFiles/secure-c.dir/src/main.c.o" "CMakeFiles/secure-c.dir/src/args.c.o" -o secure-c 

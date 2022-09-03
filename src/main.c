@@ -1,6 +1,6 @@
 
-#include <stdio.h>
+#include "args.h"
 
 int main(int argc, char **argv) {
-    printf("hello, world!\n");
+    parse(--argc, &argv[1]); // set globals and parse vars
 }

@@ -837,12 +837,12 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/secure-c.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/secure-c.dir/build.make CMakeFiles/secure-c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/secure-c.dir/build.make CMakeFiles/secure-c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/awkward/Sources/Secure-C/build/CMakeFiles --progress-num=1,2 "Built target secure-c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/awkward/Sources/Secure-C/build/CMakeFiles --progress-num=1,2,3 "Built target secure-c"
 .PHONY : CMakeFiles/secure-c.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/secure-c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/awkward/Sources/Secure-C/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/awkward/Sources/Secure-C/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/secure-c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/awkward/Sources/Secure-C/build/CMakeFiles 0
 .PHONY : CMakeFiles/secure-c.dir/rule

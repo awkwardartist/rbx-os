@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/awkward/Sources/Secure-C/src/args.c" "CMakeFiles/secure-c.dir/src/args.c.o" "gcc" "CMakeFiles/secure-c.dir/src/args.c.o.d"
   "/home/awkward/Sources/Secure-C/src/main.c" "CMakeFiles/secure-c.dir/src/main.c.o" "gcc" "CMakeFiles/secure-c.dir/src/main.c.o.d"
   )
 
