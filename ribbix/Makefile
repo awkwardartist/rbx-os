@@ -1,5 +1,5 @@
 
-SRCS=$(
+SRCS=""
 
 REPO=../
 BASE=$(REPO)/ribbix
