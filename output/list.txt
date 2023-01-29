@@ -1,2 +1,3 @@
 output/linux/initramfs.img
 output/linux/vmlinuz-linux
+output/images/boot_usb.img
