@@ -1,0 +1,15 @@
+How to create a basic Development
+Environment on a Linux host:
+
+1.) Create an OS source directory, this
+    will be called "$SRC" for the duration
+    of this document.
+
+2.) Clone this repository (awkwardartist/rbx-os)
+    into $SRC/repo. This is where the repo
+    will be stored.
+
+3.) Create an assets directory, at path
+    $SRC/assets, then populate it with
+    the shell generation utility at
+    $SRC/repo/ribbix/build/scripts/assets.sh ASSET_PATH
