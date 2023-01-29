@@ -1,4 +1,6 @@
 
+SRCS=$(
+
 REPO=../
 BASE=$(REPO)/ribbix
 DISK=output/fs/disk_usb_img.iso
