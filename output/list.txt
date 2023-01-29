@@ -1,0 +1,2 @@
+output/linux/initramfs.img
+output/linux/vmlinuz-linux
