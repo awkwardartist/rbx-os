@@ -1,5 +1,5 @@
-Copyright 2023, Awkward Dev and Fife Robotics
-Using GNU Public License v3 (GPL3)
+Independent Copyright: 2023, "Awkward Dev" & "Fife Robotics"
+Unnoficially Protected Under the GNU Public License v3 (GPL3)
 
 Owned by private developer under alias
 'Awkward Dev', with concept development
