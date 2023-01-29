@@ -5,11 +5,21 @@
 # in arguments, takes options in
 # option=value format
 #
+# usage:
+# sources are space-separated
+# mksrc.sh [option=...] SOURCES
 
-# save argument information
-ARGV_ALL="$@"
-ARGC_ALL="$#"
-CALLER="$0"
+#
+# Global Argument Info
+#
+ARG_RETURN_NAME=   ARG_RETURN_VALUE=
+ARG_RETURN_HASV=   ARG_RETURN_ERROR=
+
+ARGV_ALL="$@" ARGV=($@)
+ARGC_ALL="$#" ARGC=$#
+MKSRC_SCRIPT="$0"
+
+CALLER="$0 $ARGV_ALL"
 
 ARG_RETURN_NAME= 
 ARG_RETURN_VALUE=
@@ -19,8 +29,20 @@ ARG_RETURN_HASV=
 # state and identifying information
 _TARGET_DIR=
 _TARGET_FILE=
-_TARGET_COMPILER=gcc
 
+# compiler / assembler paths
+# and language information
+_TARGET_STDC_COMPILER=/bin/gcc
+_TARGET_CPP_COMPILER=/bin/g++
+_TARGET_ASSEMBLER=/usr/bin/nasm
+
+# all project language 
+# identifiers
+PROJECT_LANGS=(
+    "standard-c"    # standard C language
+    "standard-c++"  # C++/CPP lang
+    "x86_64-nasm"   # Assembly language
+)
 
 # script options
 # (bash array [])
@@ -79,3 +101,8 @@ arg_is_option () {
 # (Script Entrypoint)
 #
 
+# find options:
+for a in $@;
+    # loop through 
+    # all arguments
+done
