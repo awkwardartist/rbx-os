@@ -1,0 +1,11 @@
+This is the Root Partition of the Initial Linux 
+System. It is in Ext4 Format, and should be
+4G in size (1024-byte K, 1000-byte KB notation).
+
+Holds necessary linux data for a minimal ribbix
+communications system. More data is written 
+by ribbix after the communications system is 
+initialized, after setup.
+
+It is the second partition in the main system
+disk, loaded in linux by the /init shell script.
