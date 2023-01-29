@@ -9,3 +9,6 @@ initialized, after setup.
 
 It is the second partition in the main system
 disk, loaded in linux by the /init shell script.
+It is mounted on the initial ram FS at /mnt,
+and then the /init changes root with the chroot
+command, to initialize the root filesystem.
