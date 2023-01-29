@@ -1,0 +1,15 @@
+
+script utilities for parsing disks: 
+
+
+Disks are parsed "fully" after 
+changing system root to mounted 
+Linux FS (usually mounted at /mnt) after
+basic Linux System initialization.
+
+Each disk is assigned an accessible 
+index, which refers to the disk's index
+within the global "_DISK_PTRS=()" array.
+
+a disk pointer contains all identifying 
+information for accessing the disk. 
