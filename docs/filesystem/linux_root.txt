@@ -1,3 +1,12 @@
+Binary Information ... /bin/fsctl_root:
+
+Written In: C, Assembly (nasm), and Bash
+Summary:    Controls I/O actions involving
+            the Linux Root Partition.
+Format:     ELF Relocatable (x86_64,linux)
+
+Root Linux Filesystem - Summary
+
 This is the Root Partition of the Initial Linux 
 System. It is in Ext4 Format, and should be
 4G in size (1024-byte K, 1000-byte KB notation).
