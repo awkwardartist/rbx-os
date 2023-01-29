@@ -1,0 +1,2 @@
+Details the process for stripping free
+From the Linux kernel.
