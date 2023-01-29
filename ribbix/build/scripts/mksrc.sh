@@ -15,6 +15,31 @@ ARG_RETURN_NAME=
 ARG_RETURN_VALUE=
 ARG_RETURN_HASV=
 
+# current working source file
+# state and identifying information
+_TARGET_DIR=
+_TARGET_FILE=
+_TARGET_COMPILER=gcc
+
+
+# script options
+# (bash array [])
+_OPTION_NAMES=()
+_OPTION_VALUES=()
+
+# arg_add_option (name, value):
+# adds an option to the global option
+# lists (_OPTION_NAMES & _OPTION_VALUES)
+arg_add_option () {
+    local name="$1" value="$2"
+    local hasv=true
+
+    # test if value was provided
+    if [ -z "$value" ]
+        then hasv=false; fi
+
+}
+
 # returns option name if arg is
 # a script option, null otherwise.
 # also fills globals: 
@@ -47,4 +72,10 @@ arg_is_option () {
         echo "$name" && return;
     fi
 }
+
+
+#
+# Begin Execution
+# (Script Entrypoint)
+#
 
