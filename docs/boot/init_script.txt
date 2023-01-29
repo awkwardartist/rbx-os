@@ -1,0 +1,2 @@
+Initial Linux setup script, /init. Run from
+the initial RAM filesystem after linux boots
