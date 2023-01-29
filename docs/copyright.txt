@@ -1,0 +1,2 @@
+Copyright 2023, Awkward Dev and Fife Robotics
+Using GNU Public License v3 (GPL3)
