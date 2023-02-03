@@ -1,4 +1,0 @@
-To start a new Developmental Branch, 
-create a new changelog in docs/logs/branch
-and create new branch with change, then
-clone locally.

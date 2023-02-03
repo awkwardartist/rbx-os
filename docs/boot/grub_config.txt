@@ -1,1 +1,0 @@
-Todo: describe unique GRUB configuration for Ribbix OS
