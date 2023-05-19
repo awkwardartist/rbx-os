@@ -10,7 +10,7 @@ FORMAT=elf64
 OBJFLAG=
 KERNEL_FLAG_GCC="
     -ffreestanding -fno-stack-protector 
-    -m$BITS -T $KERNEL/link.ld
+    -m$BITS -T $KERNEL/link.ld -nostdlib
 "
 
 com_nasm_obj() {
@@ -75,6 +75,7 @@ build_kernel() {
     local objs="$(com_gcc_dir "$src")"
 
     gcc $KERNEL_FLAG_GCC -o $KERNEL_OUT $objs
+    rm $objs
 }
 
 build_kernel
