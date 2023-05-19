@@ -15,7 +15,7 @@ KERNEL_FLAG_GCC="
 # final linker flags 
 KERNEL_FLAG_GCC_FINAL="
     -ffreestanding -fno-stack-protector 
-    -m$BITS -T $KERNEL/link.ld -nostdlib
+    -m$BITS -nostdlib
 "
 
 com_nasm_obj() {
@@ -79,7 +79,7 @@ build_kernel() {
     local src="$KERNEL/src"
     local objs="$(com_gcc_dir "$src")"
 
-    gcc $KERNEL_FLAG_GCC_FINAL5 -o $KERNEL_OUT $objs
+    gcc $KERNEL_FLAG_GCC_FINAL -T $KERNEL/link.ld -o $KERNEL_OUT $objs
     rm $objs
 }
 
