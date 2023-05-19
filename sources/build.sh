@@ -13,6 +13,29 @@ KERNEL_FLAG_GCC="
     -m$BITS -T $KERNEL/link.ld
 "
 
+com_nasm_obj() {
+    local obj="$1.o"
+    local src="$1"
+
+    nasm -f$FORMAT -o$obj $src 
+    if [ -f "$obj" ]
+        then echo "$obj"; fi 
+}
+
+com_nasm_dir() {
+    local dir="$1"
+    local srcs=
+    local objs= o=
+
+    srcs="$(find "$dir" -name '*.s')"
+    for src in $srcs; do 
+        o="$(com_nasm_obj "$src")"
+        if [ -z "$o" ] || [ ! -f "$o" ]
+            then echo "compilation error."
+            return 
+        fi
+    done 
+}     
 com_gcc_obj() {
     local obj="$1.o"
     local src="$1"
@@ -37,7 +60,7 @@ com_gcc_dir() {
     for src in $srcs; do 
         o="$(com_gcc_obj "$src")"
         if [ -z "$o" ] || [ ! -f "$o" ]
-            echo "compilation error."
+            then echo "compilation error."
             return
         fi 
 
