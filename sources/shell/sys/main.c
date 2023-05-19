@@ -23,6 +23,7 @@ char *GetLine(FILE *File) {
 int main(int argc, char **argv) {
     char *script;
     FILE *fptr;
+    char *line;
 
     Caller = *argv;
 
@@ -34,6 +35,10 @@ int main(int argc, char **argv) {
     script = argv[1];
     fptr = fopen(script,"r");
 
+    while(line=GetLine(fptr)) {
 
+        free(line);
+    }
+    
     return 0;
 }
