@@ -76,3 +76,5 @@ build_kernel() {
 
     gcc $KERNEL_FLAG_GCC -o $KERNEL_OUT $objs
 }
+
+build_kernel
