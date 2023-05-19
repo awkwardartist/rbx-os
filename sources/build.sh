@@ -79,6 +79,8 @@ build_kernel() {
     local src="$KERNEL/src"
     local objs="$(com_gcc_dir "$src")"
 
+    nasm $KERNEL/stub.s -felf64 -o $KERNEL/stub.o 
+    objs="$objs $KERNEL/stub.o"
     gcc $KERNEL_FLAG_GCC_FINAL -T $KERNEL/link.ld -o $KERNEL_OUT $objs
     rm $objs
 }
