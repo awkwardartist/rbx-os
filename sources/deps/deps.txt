@@ -1,5 +1,0 @@
-# dependency list, read
-# line by line ubless line
-# begins with '# ' (space included)
-# null lines skipped, all paths
-# relative to sources/ directory.
