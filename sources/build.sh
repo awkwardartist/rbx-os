@@ -6,10 +6,13 @@ FORMAT=elf64
 KERNEL=sources/kernel
 KERNEL_OUT=$KERNEL/out/kernel.elf
 
+# object file flags 
 KERNEL_FLAG_GCC="
     -ffreestanding -mcmodel=large -mno-red-zone -mno-mmx
     -mno-sse -mno-sse2 
 "
+
+# final linker flags 
 KERNEL_FLAG_GCC_FINAL="
     -ffreestanding -fno-stack-protector 
     -m$BITS -T $KERNEL/link.ld -nostdlib
