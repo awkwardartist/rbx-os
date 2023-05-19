@@ -8,13 +8,23 @@ section .text
 extern main
 
 _start:
-    ; 
+    ; initialize stack
     mov esp, stack_space
     mov ebp, stack_end
 
+    ; enter kernel
     call main
-    ret
 
+    ; ensure return 0
+    cmp eax, 0
+    jne .hang
+
+    ret
+.hang:
+    ; infinite loop
+    jmp .hang
+    ret
+    
 section .bss
 
 stack_space:
