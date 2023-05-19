@@ -1,14 +1,16 @@
 #!/bin/bash
 
-KERNEL=sources/kernel
-KERNEL_OUT=$KERNEL/out/kernel.elf
-
 BITS=64
 FORMAT=elf64
 
-# compilation flags 
-OBJFLAG=
+KERNEL=sources/kernel
+KERNEL_OUT=$KERNEL/out/kernel.elf
+
 KERNEL_FLAG_GCC="
+    -ffreestanding -mcmodel=large -mno-red-zone -mno-mmx
+    -mno-sse -mno-sse2 
+"
+KERNEL_FLAG_GCC_FINAL="
     -ffreestanding -fno-stack-protector 
     -m$BITS -T $KERNEL/link.ld -nostdlib
 "
@@ -40,8 +42,8 @@ com_gcc_obj() {
     local obj="$1.o"
     local src="$1"
 
-    gcc -m$BITS -I$INCLUDE \
-        -c -w $src -o$obj
+    gcc -m$BITS -I$KERNEL/src \
+        -c -w $src -o$obj $KERNEL_FLAG_GCC
 
     if [ -f "$obj" ]
         then echo "$obj"; fi
@@ -74,7 +76,7 @@ build_kernel() {
     local src="$KERNEL/src"
     local objs="$(com_gcc_dir "$src")"
 
-    gcc $KERNEL_FLAG_GCC -o $KERNEL_OUT $objs
+    gcc $KERNEL_FLAG_GCC_FINAL5 -o $KERNEL_OUT $objs
     rm $objs
 }
 
